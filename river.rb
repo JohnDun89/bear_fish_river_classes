@@ -7,4 +7,8 @@ attr_reader :name, :fish_number
     @fish_number = fish_number
   end
 
+  def bear_takes_fish(fish)
+    @fish_number.delete(fish)
+  end
+
 end

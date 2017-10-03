@@ -5,7 +5,7 @@ require('minitest/rg')
 class TestRiver < MiniTest::Test
 
   def setup
-    @river = River.new('Water of Leith', 6)
+    @river = River.new('Water of Leith', ['tom','sam','lucy','sarah','ed','paul'])
   end
 
   def test_name
@@ -13,11 +13,13 @@ class TestRiver < MiniTest::Test
   end
 
   def test_fish_number
-    assert_equal(6, @river.fish_number)
+    assert_equal(6, @river.fish_number.count)
   end
 
   def test_bear_takes_fish
-    @river.bear_takes_fish(1)
+    @river.bear_takes_fish('sam')
     assert_equal(5, @river.fish_number.count)
+    assert_equal(false, @river.fish_number.include?('sam'))
+  end
 
 end

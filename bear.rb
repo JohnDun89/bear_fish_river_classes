@@ -10,7 +10,10 @@ class Bear
 
   def take_a_fish_from_river(fish)
     @stomach << fish
-    
+  end
+
+  def roar
+    return "RAAAARRRR, GRRRR"
   end
 
 end
