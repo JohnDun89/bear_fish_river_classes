@@ -16,4 +16,8 @@ class Bear
     return "RAAAARRRR, GRRRR"
   end
 
+  def stomach_count
+    return @stomach.count
+  end
+
 end

@@ -10,6 +10,7 @@ class TestBear < MiniTest::Test
     @bear = Bear.new('Vincent',[])
     @river = River.new('Water of Leith',[@fish,'random fish'])
     @fish = Fish.new('tom')
+    @full_bear = Bear.new('Vladamir',['paul','kev','michelle'])
   end
 
   def test_name
@@ -29,4 +30,10 @@ class TestBear < MiniTest::Test
   def test_roar
     assert_equal('RAAAARRRR, GRRRR', @bear.roar)
   end
+
+  def test_food_count
+    result = @full_bear.stomach_count
+    assert_equal(result ,@full_bear.stomach.count)
+  end
+
 end
