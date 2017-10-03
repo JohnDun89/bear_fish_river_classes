@@ -8,4 +8,9 @@ class Bear
 
   end
 
+  def take_a_fish_from_river(fish)
+    @stomach << fish
+    
+  end
+
 end
